@@ -21,7 +21,7 @@
 		@mixin atSmall {
 			margin-right: 1rem;
 			margin-left: 0;
-			display: inline;
+			display: inline-block;
 			margin-bottom: 0;
 			position: relative;
 			top: 8px;
