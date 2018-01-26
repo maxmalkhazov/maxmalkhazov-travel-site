@@ -11208,6 +11208,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_mobileMenu_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_RevealOnScroll_js__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_Modal_js__ = __webpack_require__(7);
+
 
 
 
@@ -11219,6 +11221,8 @@ new __WEBPACK_IMPORTED_MODULE_2__modules_RevealOnScroll_js__["a" /* default */](
 new __WEBPACK_IMPORTED_MODULE_2__modules_RevealOnScroll_js__["a" /* default */](__WEBPACK_IMPORTED_MODULE_0_jquery___default()(".testimonial"), "60%");
 
 var stickyHeader = new __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader_js__["a" /* default */]();
+
+var modal = new __WEBPACK_IMPORTED_MODULE_4__modules_Modal_js__["a" /* default */]();
 
 /***/ }),
 /* 3 */
@@ -11735,6 +11739,51 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+class Modal {
+	constructor() {
+		this.openModalBtn = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".open-modal");
+		this.modal = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".modal");
+		this.closeModalBtn = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".modal__close");
+		this.events();
+	}
+	
+	events() {
+		// clicking the open modal btn
+		this.openModalBtn.click(this.openModal.bind(this));
+		// clicking x close modal btn
+		this.closeModalBtn.click(this.closeModal.bind(this));
+		// esc key on keyboard
+		__WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).keyup(this.keyPressHandler.bind(this));
+		
+	}
+	
+	keyPressHandler(e) {
+		if (e.keyCode === 27) {
+			this.closeModal();
+		}
+	}
+	
+	openModal() {
+		this.modal.addClass("modal--is-visible");
+		return false;
+	}
+	
+	closeModal() {
+		this.modal.removeClass("modal--is-visible");
+	}
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Modal);
 
 /***/ })
 /******/ ]);
