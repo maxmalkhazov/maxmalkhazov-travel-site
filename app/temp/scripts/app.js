@@ -11252,7 +11252,25 @@ class MobileMenu {
 	}
 }
 
+// var MobileMenu = function() {
+// 	this.menuIcon = $(".site-header__menu-icon");
+// 	this.menuContent = $(".site-header__menu-content");
+// 	this.siteHeader = $(".site-header");
+// 	this.events();
+// }
+
+// MobileMenu.prototype.events = function() {
+// 	this.menuIcon.click(this.toggleTheMenu.bind(this));
+// }
+
+// MobileMenu.prototype.toggleTheMenu = function() {
+// 	this.menuContent.toggleClass("site-header__menu-content--is-visible");
+// 	this.siteHeader.toggleClass("site-header--is-expanded");
+// 	this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+// }
+
 /* harmony default export */ __webpack_exports__["a"] = (MobileMenu);
+
 
 /***/ }),
 /* 4 */
@@ -11313,6 +11331,7 @@ class RevealOnScroll {
 
 class stickyHeader {
 	constructor() {
+		this.lazyImages = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".lazyload");
 		this.siteHeader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".site-header");
 		this.headerTriggerElement = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".large-hero__title");
 		this.pageSections = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".page-section");
@@ -11320,6 +11339,13 @@ class stickyHeader {
 		this.createHeaderWaypoint();
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
+	}
+	
+	refreshWaypoints() {
+		this.lazyImages.on("load", function() {
+			Waypoint.refreshAll();
+		});
 	}
 	
 	addSmoothScrolling() {
