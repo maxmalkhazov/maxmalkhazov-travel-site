@@ -11205,7 +11205,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_mobileMenu_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_RevealOnScroll_js__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_Modal_js__ = __webpack_require__(7);
@@ -11215,7 +11215,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-var mobileMenu = new __WEBPACK_IMPORTED_MODULE_1__modules_mobileMenu_js__["a" /* default */]();
+var mobileMenu = new __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu_js__["a" /* default */]();
 
 new __WEBPACK_IMPORTED_MODULE_2__modules_RevealOnScroll_js__["a" /* default */](__WEBPACK_IMPORTED_MODULE_0_jquery___default()(".feature-item"), "85%");
 new __WEBPACK_IMPORTED_MODULE_2__modules_RevealOnScroll_js__["a" /* default */](__WEBPACK_IMPORTED_MODULE_0_jquery___default()(".testimonial"), "60%");
